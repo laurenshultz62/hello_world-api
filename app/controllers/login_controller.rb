@@ -1,4 +1,6 @@
 class LoginController < ApplicationController
+    skip_before_action :verify_authenticity_token
+    
     # /authenticate
     def authenticate_login
         username, password = params.values_at :username, password
