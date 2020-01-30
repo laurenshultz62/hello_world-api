@@ -1,4 +1,5 @@
 class LoginController < ApplicationController
+    # /authenticate
     def authenticate_login
         username, password = params.values_at :username, password
         if username == "valid"
